@@ -1,0 +1,22 @@
+/*
+ * stm32f407xx.h
+ *
+ *  Created on: Jun 13, 2024
+ *      Author: greycell
+ */
+
+#ifndef INC_STM32F407XX_H_
+#define INC_STM32F407XX_H_
+
+/*
+ * define address  of flash and SRAM
+ */
+
+#define FLASH_BASEADDR        0x08000000       /* RM0090 datasheet */
+#define SRAM1_BASEADDR        0x20000000
+#define SRAM2_BASEADDR        0x2001C000		/* 112kB from sram1*/
+#define ROM_BASEADDR          0x1FFF0000        /* System memory*/
+#define SRAM_BASEADDR         SRAM1_BASEADDR    /* SRAM1 can be defined as SRAM*/
+
+
+#endif /* INC_STM32F407XX_H_ */
