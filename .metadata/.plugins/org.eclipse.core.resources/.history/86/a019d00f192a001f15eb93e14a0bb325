@@ -1,0 +1,46 @@
+/*
+ * stm32f407xx.h
+ *
+ *  Created on: Jun 13, 2024
+ *      Author: greycell
+ */
+
+#ifndef INC_STM32F407XX_H_
+#define INC_STM32F407XX_H_
+
+/*
+ * base address of flash and SRAM memories
+ */
+
+#define FLASH_BASEADDR        (uint32_t) 0x08000000       /* RM0090 datasheet */
+#define SRAM1_BASEADDR        0x20000000U
+#define SRAM2_BASEADDR        0x2001C000U		/* 112kB from sram1*/
+#define ROM_BASEADDR          0x1FFF0000U        /* System memory*/
+#define SRAM_BASEADDR         SRAM1_BASEADDR    /* SRAM1 can be defined as SRAM*/
+
+
+/*
+ * AHBx and APBx bus peripheral base memories
+ */
+
+#define PERIPH_BASE           0x40000000U
+#define APB1PERIPH_BASE       PERIPH_BASE
+#define APB2PERIPH_BASE       0x40010000U
+#define AHB1PERIPH_BASE       0x40020000U
+#define AHB2PERIPH_BASE       0x50000000U
+
+
+/*
+ * Base address of peripheral which are on AHB1 Bus
+ */
+#define GPIOA_BASEADDR         (AHB1PERIPH_BASE + 0x0000)
+#define GPIOB_BASEADDR         (AHB1PERIPH_BASE + 0x0000)
+#define GPIOC_BASEADDR         (AHB1PERIPH_BASE + 0x0000)
+#define GPIOD_BASEADDR         (AHB1PERIPH_BASE + 0x0000)
+#define GPIOE_BASEADDR         (AHB1PERIPH_BASE + 0x0000)
+#define GPIOF_BASEADDR         (AHB1PERIPH_BASE + 0x0000)
+#define GPIOG_BASEADDR         (AHB1PERIPH_BASE + 0x0000)
+#define GPIOH_BASEADDR         (AHB1PERIPH_BASE + 0x0000)
+#define GPIOI_BASEADDR         (AHB1PERIPH_BASE + 0x0000)
+
+#endif /* INC_STM32F407XX_H_ */
