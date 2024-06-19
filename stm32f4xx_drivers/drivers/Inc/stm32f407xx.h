@@ -48,6 +48,12 @@
 
 
 /*
+ * macros for all the possible priority levels
+ */
+#define NVIC_IRQ_PRI0    0
+#define NVIC_IRQ_PRI15    15
+
+/*
  * Generic macros
  */
 #define ENABLE           1
